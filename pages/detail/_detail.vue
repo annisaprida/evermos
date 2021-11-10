@@ -164,6 +164,9 @@
         }
         &__right{
             float: right;
+            @media (min-width: 600px) {
+                margin-right: 40px;
+            }
         }
         &__add-to-wishlist{
             font-size: 16px;
