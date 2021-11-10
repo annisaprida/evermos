@@ -27,12 +27,14 @@
                     <span class="product__item__discount__list-price">Rp200.000</span>
                 </div>
                 <div class="product__detail__content__right">
-                    <button class="product__detail__content__add-to-wishlist" @click="showToast">
+                    <button class="product__detail__content__add-to-wishlist" @click="showToast('wishlist')">
                         <span class="icon-heart"></span>
                     </button>
                 </div>
                 <Toast v-if="isVisibleToast">
-                   <template v-slot:body>Added To Wishlist</template>
+                   <template v-slot:body>
+                       {{isWishlistToast?"Added To Wishlist":"Added to Cart"}}
+                   </template>
                 </Toast>
             </div>
         </section>
@@ -51,15 +53,15 @@
             <p>Produk dari penjual-penjual yang memberi Garansi pengiriman 10 menit</p>
             <product-item-list/>
         </section>
-        <add-to-cart-button @showToast="showToast"/>
+        <add-to-cart-button @showToast="showToast('cart')"/>
     </div>
 </template>
 <script src="./js/detail.js"></script>
 
 <style lang="scss" scoped>
 .detail-page {
-    background: '#f4f4f4';
-    min-height: '100vh';
+    background: #f4f4f4;
+    min-height: 100vh;
 }
 .product__detail{
     position: relative;
