@@ -1,0 +1,64 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "1000 Apex Coins",
+            "detailName": "subApex Legends PC",
+            "price": 100000,
+            "discount": 50,
+            "listPrice": 200000,
+            "description": "Deskripsi produk mobile legends dari toko UlalaShop yang paling termurah dan terbaik juga terlengkap",
+            "stock": 999,
+            "deliveryDuration": "10 menit",
+            "sold": 1000
+        },
+        {
+            "id":2,
+            "name": "2000 Apex Coins",
+            "detailName": "subApex Legends PC",
+            "price": 100000,
+            "discount": 50,
+            "listPrice": 200000,
+            "description": "Deskripsi produk mobile legends dari toko UlalaShop yang paling termurah dan terbaik juga terlengkap",
+            "stock": 999,
+            "deliveryDuration": "10 menit",
+            "sold": 1000
+        },
+        {
+            "id":3,
+            "name": "3000 Apex Coins",
+            "detailName": "subApex Legends PC",
+            "price": 100000,
+            "discount": 50,
+            "listPrice": 200000,
+            "description": "Deskripsi produk mobile legends dari toko UlalaShop yang paling termurah dan terbaik juga terlengkap",
+            "stock": 999,
+            "deliveryDuration": "10 menit",
+            "sold": 1000
+        },
+        {
+            "id":4,
+            "name": "4000 Apex Coins",
+            "detailName": "subApex Legends PC",
+            "price": 100000,
+            "discount": 50,
+            "listPrice": 200000,
+            "description": "Deskripsi produk mobile legends dari toko UlalaShop yang paling termurah dan terbaik juga terlengkap",
+            "stock": 999,
+            "deliveryDuration": "10 menit",
+            "sold": 1000
+        },
+        {
+            "id":5,
+            "name": "5000 Apex Coins",
+            "detailName": "subApex Legends PC",
+            "price": 100000,
+            "discount": 50,
+            "listPrice": 200000,
+            "description": "Deskripsi produk mobile legends dari toko UlalaShop yang paling termurah dan terbaik juga terlengkap",
+            "stock": 999,
+            "deliveryDuration": "10 menit",
+            "sold": 1000
+        }
+    ]
+}
