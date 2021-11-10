@@ -1,3 +1,6 @@
+import { mapActions, mapGetters } from 'vuex'
+import { toCurrencyFormat } from '@/util/number'
+
 export default{
     name: 'detail',
     data(){
@@ -8,7 +11,19 @@ export default{
             isWishlistToast: false
         }
     },
+    created(){
+        this.getProductById()
+    },
+    computed: {
+        ...mapGetters('product', [ 'selectedProduct' ]),
+    },
     methods: {
+        ...mapActions({
+            getSelectedProduct: 'product/getSelectedProduct'
+        }),
+        getProductById(){
+            this.getSelectedProduct({data:this.$route.params.detail})
+        },
         toggleModal(bool){
             this.isVisibleModal = bool
         },
@@ -21,6 +36,9 @@ export default{
         },
         toggleBottomSheet(bool){
             this.isVisibleBottomSheet = bool
+        },
+        toCurrencyFormat(amount){
+            return toCurrencyFormat(amount)
         }
     }
 }

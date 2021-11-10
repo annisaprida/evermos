@@ -9,23 +9,23 @@
             <button class="product__detail__image" @click="toggleModal(true)">
               <img
                 alt="product"
-                src="~assets/images/placeimg_300_160.jpg"
+                :src="selectedProduct.thumbnail"
                 width="300"
                 height="160"
             /></button>
             <modal v-if="isVisibleModal" @onClose="toggleModal(false)">
-               <template v-slot:body><img src="~assets/images/placeimg_300_160.jpg"></template>
+               <template v-slot:body><img :src="selectedProduct.thumbnail"></template>
             </modal>
             <div class="product__detail__content">
                 <div class="product__detail__content__left">
                     <h1>
-                        <div class="product__item__title">1000 Apex Coins</div>
-                        <div class="product__item__subtitle">Apex Legends PC</div>
+                        <div class="product__item__title">{{selectedProduct.name}}</div>
+                        <div class="product__item__subtitle">{{selectedProduct.detailName}}</div>
                     </h1>
-                    <div class="product__item__price">Rp 100.000</div> <span>per 1 top up</span>
+                    <div class="product__item__price">{{toCurrencyFormat(selectedProduct.price)}}</div>
                     <div class="product__item__discount">
-                         <span class="product__item__discount__amount">99%</span>
-                        <span class="product__item__discount__list-price">Rp200.000</span>
+                         <span class="product__item__discount__amount">{{selectedProduct.discount}}%</span>
+                        <span class="product__item__discount__list-price">{{toCurrencyFormat(selectedProduct.listPrice)}}</span>
                     </div>
                 </div>
                 <div class="product__detail__content__right">
@@ -43,22 +43,21 @@
         <section class="product__detail__content">
             <div class="product__detail__description">
                 <h2>Deskripsi Produk</h2>
-                <p>Deskripsi produk mobile legends dari toko UlalaShop yang paling termurah dan terbaik juga terlengkap</p>
+                <p>{{selectedProduct.description}}</p>
                 <button @click="toggleBottomSheet(true)" class="product__detail__description__see-more">Selengkapnya</button>
                 <BottomSheet v-if="isVisibleBottomSheet" @onClose="toggleBottomSheet(false)">
-                   <template v-slot:body><h2>Deskripsi Produk</h2><p>Deskripsi produk mobile legends dari toko UlalaShop yang paling termurah dan terbaik juga terlengkap. Deskripsi ini untuk versi lengkap dan panjang di bottomsheet</p></template>
+                   <template v-slot:body><h2>Deskripsi Produk</h2><p>{{selectedProduct.description}}</p></template>
                 </BottomSheet>
             </div>
         </section>
         <section class="product__detail__content">
             <h1>Pengiriman Tercepat</h1>
-            <p>Produk dari penjual-penjual yang memberi Garansi pengiriman 10 menit</p>
-            <product-item-list/>
+            <p>Produk dari penjual-penjual yang memberi Garansi pengiriman {{selectedProduct.deliveryDuration}}</p>
         </section>
         <add-to-cart-button @showToast="showToast('cart')"/>
     </div>
 </template>
-<script src="./js/detail.js"></script>
+<script src="./js/_detail.js"></script>
 
 <style lang="scss" scoped>
 .detail-page {
