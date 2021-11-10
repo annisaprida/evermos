@@ -1,5 +1,6 @@
 <template>
   <section class="header">
+    <img src="~assets/images/evermos.jpeg"/>
   </section>
 </template>
 
@@ -8,7 +9,12 @@
   border-bottom: 1px solid #ddd;
   padding: 10px;
   img{
-      width: 120px;
+      width: 50px;
     }    
 }
 </style>
+<script>
+export default{
+  name: 'Logo'
+}
+</script>

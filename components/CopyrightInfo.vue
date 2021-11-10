@@ -1,7 +1,7 @@
 <template>
   <section class="footer">
     <p>
-      &copy; 2014-2021 PT. Five Jack All Right Reserved.
+      &copy; 2014-2021 
       <br/>
       All other trademarks belong to their respective owners.
     </p>
@@ -20,3 +20,8 @@
     margin-top: 40px;
 }
 </style>
+<script>
+export default{
+  name: 'CopyrightInfo'
+}
+</script>

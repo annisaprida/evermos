@@ -23,8 +23,10 @@
                         <div class="product__item__subtitle">Apex Legends PC</div>
                     </h1>
                     <div class="product__item__price">Rp 100.000</div> <span>per 1 top up</span>
-                    <span class="product__item__discount__amount">99%</span>
-                    <span class="product__item__discount__list-price">Rp200.000</span>
+                    <div class="product__item__discount">
+                         <span class="product__item__discount__amount">99%</span>
+                        <span class="product__item__discount__list-price">Rp200.000</span>
+                    </div>
                 </div>
                 <div class="product__detail__content__right">
                     <button class="product__detail__content__add-to-wishlist" @click="showToast('wishlist')">
@@ -60,8 +62,37 @@
 
 <style lang="scss" scoped>
 .detail-page {
+     @media (min-width: 600px) {
+        background: #fff;
+    }
     background: #f4f4f4;
     min-height: 100vh;
+}
+.product__item{
+    &__subtitle{
+        font-size: 14px;
+        color: #aeaeae;
+    }
+    &__price {
+        color: #f06b11;
+        font-weight: bold;
+        font-size: 18px;
+        margin: 10px 0;
+        display: inline-block;
+    }
+    &__discount{
+        &__amount{
+            background: #f23132;
+            color: #fff;
+            border-radius: 3px;
+            padding: 2px 4px;
+            margin-right: 5px;
+        }
+        &__list-price{
+            color: #aeaeae;
+            text-decoration: line-through;
+        }
+    }
 }
 .product__detail{
     position: relative;
@@ -82,9 +113,26 @@
           background: none;
           border: none;
           width: initial;
+          @media (min-width: 600px) {
+            float: left;
+          }
         }
         .icon-cart{
           margin-left: 10px;
+          @media (min-width: 600px){
+            display: none;
+          }
+        }
+        @media (min-width: 600px){
+            position: absolute;
+            top: 10px;
+            width: auto;
+            padding: 0 10px;
+            right: 0;
+            z-index: 1;
+            .icon-arrow{
+                display: none;
+            }
         }
     }
     &__loading{
@@ -97,6 +145,10 @@
     }
     &__image{
         width: 100%;
+         @media (min-width: 600px) {
+            width: 300px;
+            float: left;
+        }
     }
     &__content{
         padding: 10px;
@@ -107,6 +159,7 @@
         &__left{
             float: left;
             h1{
+                font-size: 18px;
                 margin-top: 0;
             }
         }

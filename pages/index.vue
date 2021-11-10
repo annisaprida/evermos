@@ -1,18 +1,13 @@
 <template>
   <main>
-    <header/>
+    <logo/>
+    <!-- {{productList}} ini -->
      <section class="content">
         <h1>Termurah di Seluruh Indonesia</h1>
-        <product-item-list/>
+        <product-item-list :productList="productList"/>
     </section>
-        <section class="content">
-        <h1>Produk Mobile Legends terpopuler</h1>
-        <product-item-list/>
-    </section>
-    <footer/>
+    <copyright-info/>
   </main>
 </template>
 
-<script>
-export default {}
-</script>
+<script src="./js/home.js"></script>
