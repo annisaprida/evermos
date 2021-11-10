@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fevermos\u002F_nuxt\u002Fstatic\u002F1636548431",layout:"default",error:a,state:{product:{productList:[],selectedProduct:{}}},serverRendered:true,routePath:"\u002F",config:{_app:{basePath:"\u002Fevermos\u002F",assetsPath:"\u002Fevermos\u002F_nuxt\u002F",cdnURL:a}}}}(null));
